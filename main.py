@@ -114,6 +114,7 @@ def generate_curve():
     curve_obj = bpy.data.objects.new('CurveObject', curve_data)
     bpy.context.collection.objects.link(curve_obj)
     
+    bpy.context.view_layer.objects.active = curve_obj
     curve_obj.select_set(True)
     bpy.ops.object.convert(target='MESH', keep_original=False)
      
